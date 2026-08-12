@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federated Health Demo</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Federated Health Demo</h1>
+      <p class="subtitle">Readmission risk · two hospitals · weights-only sync</p>
+    </header>
+
+    <nav class="stepper" id="stepper">
+      <div class="step" data-step="0">1 · Ready</div>
+      <div class="step" data-step="1">2 · Train Site A</div>
+      <div class="step" data-step="2">3 · Train Site B</div>
+      <div class="step" data-step="3">4 · Federated round</div>
+    </nav>
+
+    <section class="controls">
+      <button id="nextBtn" class="primary">Next step</button>
+      <button id="resetBtn" class="ghost">Reset</button>
+      <span class="step-label" id="stepLabel">Ready</span>
+    </section>
+
+    <main class="layout">
+      <section class="panel sites-panel">
+        <h2>Hospital sites</h2>
+        <div id="sitesGrid" class="sites-grid"></div>
+      </section>
+
+      <section class="panel results-panel">
+        <h2>Training & federation</h2>
+        <div id="resultsArea"></div>
+      </section>
+
+      <aside class="panel audit-panel">
+        <h2>Privacy audit log</h2>
+        <ul id="auditLog"></ul>
+      </aside>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
